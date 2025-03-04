@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .slider-container {
+            width: 600px;
+            height: 350px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .slider {
+            display: flex;
+            width: calc(600px * 3);
+            transition: transform 0.5s ease-in-out;
+        }
+        .slider img {
+            width: 600px;
+            height: 350px;
+            border-radius: 12px;
+            object-fit: cover; 
+        }
+        .btn-container {
+            margin-top: 15px;
+        }
+        .btn {
+            padding: 12px 18px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 6px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+        .nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Slider</h2>
+    <div class="slider-container">
+        <div class="slider" id="slider"></div>
+    </div>
+    <div class="btn-container">
+        <button class="btn" onclick="prevImage()">Previous</button>
+        <button class="btn" onclick="nextImage()">Next</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
